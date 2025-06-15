@@ -61,9 +61,17 @@ classes via the class_weight parameter. This adjustment helps the model avoid bi
 to generalize across all mood categories.</p>
 
 <h2>Unimodal Model – Audio Features</h2>
-
+<p>For each feature modality, a separate model was developed. In the case of audio features, several classification algorithms were tested. Among them, XGBoost, optimized using RandomizedSearch and incorporating class weight adjustments to handle class imbalance, yielded the best performance.
+This configuration achieved the highest macro-averaged F1-score of 0.49, while also reaching a moderate accuracy of 0.65.</p>
+<img src="images/audio_metrics.png" alt="audio metrics" class="my-image">
+<p>The evaluation metrics of the selected model are presented above.</p>
 <h2>Unimodal Model – Visual Features</h2>
-
+<p>A separate model was developed for the visual features extracted from album cover images. 
+Among the evaluated algorithms, Random Forest provided the most promising results. To improve 
+performance and address class imbalance, both class weighting and RandomizedSearch for hyperparameter 
+tuning were applied. The final model achieved an accuracy of 0.52 and a macro-averaged F1-score of 0.37.</p>
+<img src="images/visual_metrics.png" alt="visual metrics" class="my-image">
+<p>The evaluation metrics of the selected model are presented above.</p>
 <h2>Unimodal Model – Textual Features</h2>
 
 <h2>Combining Modalities via Late Fusion</h2>
