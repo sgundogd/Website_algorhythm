@@ -125,7 +125,7 @@ The Audio+Genre modality achieved the highest overall performance across both me
 The Color model exhibited moderate accuracy, comparable to the Lyrics model, but its F1-score was slightly higher, suggesting better performance on underrepresented classes.
 The Lyrics model, while incorporating meaningful textual information, had the lowest F1-score, reflecting the challenge of capturing emotional nuance from lyrics alone in a multiclass setting.</p>
 <img src="images/late_fusion_metrics.jpeg" alt="late fusion metrics" class="my-image">
-<p>Evaluation results following the late fusion step are shown above.</p>
+<p>Evaluation results following the late fusion step are shown above. During the late fusion phase, several models including Random Forest and CatBoost were tested alongside XGBoost. Among these, the best performance in terms of macro-averaged F1-score was achieved by the XGBoost-based model, which was therefore selected as the final fusion classifier.</p>
 <img src="images/conf_matrix.jpeg" alt="confusion matrix" class="my-image">
 <p>The confusion matrix above shows the class-wise prediction performance of the final model obtained through late fusion with XGBoost.
 The model performs strongly on the Energetic class, with 1,414 correct predictions, but tends to confuse Stressed with Energetic, as seen in the 452 misclassified instances.
