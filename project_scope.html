@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Scope | Algorhytm</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project_scope.css">
+</head>
+<body>
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="videos/5.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="content-box">
+    <h1>Project Overview</h1>
+
+    <h2>1. Scope of the Project</h2>
+    <p>
+      This project aims to measure whether it can accurately predict the emotional states conveyed by songs using multidimensional features.
+      In addition to the Spotify dataset, album cover images and lyrics were used.
+      The main goal of the project is to measure whether we can predict the emotion conveyed by a song by holistically analyzing audio-based (valence and energy),
+      visual (album cover) and textual (lyrics) features using machine learning techniques.
+      The project is based on the two-dimensional energy-valence matrix, which is widely used in psychology models such as Thayer's Mood Model to describe emotions.
+      Songs are divided into emotional clusters such as energetic, sad, calm, stressed.
+    </p>
+    <ul>
+      <li>Performing textual analysis (NLP) on lyrics to identify emotional expressions and integrate them into the model</li>
+      <li>Using visual processing techniques to analyze album cover features and use them for emotion prediction</li>
+      <li>Determining the emotional position of songs on the mood map using audio-based features (valence and energy) taken from Spotify</li>
+    </ul>
+    <p>
+      The ultimate goal of this project is to create an innovative machine learning-powered emotion prediction system based on a multimodal approach.
+    </p>
+
+    <h2>2. Research Questions</h2>
+    <ul>
+      <li>How accurately can a song's emotion be predicted based on its audio features, visual features, lyrics and genre?</li>
+      <li>To what extent do the visual features of album covers (e.g., color, contrast, visual density), song lyrics, audio features and genres align with the predicted emotional state?</li>
+      <li>Among various machine learning models (e.g., XGBoost, Random Forest, SVM), which algorithm performs best in predicting a song’s emotion?</li>
+    </ul>
+
+    <a href="index.html" class="back-button">← Back to Home</a>
+  </div>
+
+  <footer>
+    <p>Developed by Sevgi, Belinay, Sude, Yeliz</p>
+  </footer>
+</body>
+</html>

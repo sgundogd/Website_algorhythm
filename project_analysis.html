@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Analysis | Algorhytm</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project_analysis.css">
+</head>
+<body>
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="videos/5.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="content-box">
+    <h1>Project Analysis</h1>
+    <p>
+      This project presents a multimodal machine learning approach designed to predict the emotional state conveyed by songs. 
+      It incorporates three different types of data: audio, visual, and textual. Each data modality is individually 
+      processed and modeled, and their outputs are combined using a late fusion strategy. This approach aims to capture 
+      the emotional dimension of music in a more comprehensive way.
+    </p>
+    <div class="inline-section">
+      <div class="label">Audio Features:</div>
+      <div class="text">
+    We extract numerical features such as danceability, loudness, and the song’s subgenre from the Spotify API. These features directly reflect 
+    a song’s perceived positivity and intensity, and are fundamental to positioning it on an energy-valence plane based on 
+    Thayer’s Mood Model.
+  </div>
+</div>
+<br>
+<div class="inline-section">
+      <div class="label">Visual Features:</div>
+      <div class="text">
+      Album cover images were analyzed to extract features such as color, brightness, texture, and composition. 
+      These visual cues often reflect the mood or genre of the song.
+  </div>
+</div>
+<br>
+ <div class="inline-section">
+      <div class="label">Textual Features:</div>
+      <div class="text">
+      Song lyrics were analyzed using natural language processing (NLP) techniques. Emotional expressions and thematic content were 
+      identified and used as features in the model.
+  </div>
+</div>
+
+    <p>
+      The ultimate goal of the model is to classify songs into one of four mood categories derived from Thayer’s Mood Model: 
+      Energetic, Calm, Sad, and Stressed. Integrating complementary emotional cues from different modalities plays a key 
+      role in improving prediction performance.
+    </p>
+
+    <h2>Class Distribution and Imbalance Handling</h2>
+<img src="images/class_imbalance.jpeg" alt="class imbalance" class="my-image">
+    <p>As seen in the figure above, there is a noticeable imbalance in the distribution of mood classes. Certain classes, 
+      such as Energetic and Stressed, are more represented than others.
+To address this issue, class weighting was applied during model training by assigning higher weights to underrepresented 
+classes via the class_weight parameter. This adjustment helps the model avoid bias toward majority classes and improves its ability 
+to generalize across all mood categories.</p>
+
+<h2>Unimodal Model – Audio Features</h2>
+
+<h2>Unimodal Model – Visual Features</h2>
+
+<h2>Unimodal Model – Textual Features</h2>
+
+<h2>Combining Modalities via Late Fusion</h2>
+
+
+
+    <a href="index.html" class="back-button">← Back to Home</a>
+  </div>
+
+  <footer>
+    <p>Developed by Sevgi, Belinay, Sude, Yeliz</p>
+  </footer>
+</body>
+</html>
